@@ -104,3 +104,6 @@ ENV/
 # mypy
 .mypy_cache/
 /handover_config.py
+/email_celery_app_config.py
+/handover_celery_app_config.py
+/event_celery_app_config.py

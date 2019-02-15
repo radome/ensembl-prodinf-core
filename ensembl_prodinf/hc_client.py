@@ -5,7 +5,7 @@ import json
 import re
 from collections import defaultdict
 from rest_client import RestClient
-from server_utils import assert_mysql_uri, assert_mysql_db_uri
+from ensembl_prodinf.utils import assert_mysql_uri, assert_mysql_db_uri
 
 class HcClient(RestClient):
     

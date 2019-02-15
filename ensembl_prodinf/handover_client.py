@@ -3,7 +3,7 @@ import argparse
 import logging
 import requests
 from datetime import datetime
-from server_utils import assert_http_uri, assert_mysql_db_uri, assert_email
+from ensembl_prodinf.utils import assert_http_uri, assert_mysql_db_uri, assert_email
 from sqlalchemy.engine.url import make_url
 import re
 

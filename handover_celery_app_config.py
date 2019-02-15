@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import getpass
 broker_url = os.environ.get("CELERY_BROKER_URL", 'pyamqp://')

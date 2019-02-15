@@ -4,7 +4,7 @@ import logging
 import re
 
 from rest_client import RestClient
-from server_utils import assert_mysql_db_uri
+from ensembl_prodinf.utils import assert_mysql_db_uri
 
 
 class DbCopyClient(RestClient):
