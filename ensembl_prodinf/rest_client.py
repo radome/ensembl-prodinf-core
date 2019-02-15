@@ -5,11 +5,12 @@ import time
 
 import requests
 from requests.exceptions import HTTPError
-from .utils.app_logging import add_app_handler
 
 from server_utils import assert_http_uri
+from .utils.app_logging import add_app_handler
 
 logger = logging.getLogger(__name__)
+
 
 def retry_requests(test_func):
     """
@@ -46,8 +47,7 @@ class RestClient(object):
     def __init__(self, uri):
         assert_http_uri(uri)
         self.uri = uri
-        add_app_handler()
-
+        add_app_handler(logger, __name__)
 
     @retry_requests
     def submit_job(self, payload):
