@@ -11,7 +11,7 @@ class HcClient(RestClient):
     
     """Client for checking databases using the HC service"""
     
-    def submit_job(self, db_uri, production_uri, compara_uri, staging_uri, live_uri, hc_names, hc_groups, data_files_path, email, tag):
+    def submit_job(self, **kwargs):
         """
         Submit a database for checkiing
         Arguments:
@@ -26,6 +26,17 @@ class HcClient(RestClient):
           email - optional address for an email on job completion
           tag - optional tag to allow jobs to be grouped for reporting
         """
+        db_uri= kwargs.get('db_uri', "")
+        production_uri= kwargs.get('production_uri', "")
+        compara_uri= kwargs.get('compara_uri', "")
+        staging_uri= kwargs.get('staging_uri', "")
+        live_uri= kwargs.get('live_uri', "")
+        hc_names= kwargs.get('hc_names', "")
+        hc_groups= kwargs.get('hc_groups', "")
+        data_files_path= kwargs.get('data_files_path', "")
+        email= kwargs.get('email', "")
+        tag= kwargs.get('tag', "")
+
         assert_mysql_db_uri(db_uri)
         assert_mysql_db_uri(production_uri)
         assert_mysql_db_uri(compara_uri)

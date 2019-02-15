@@ -98,7 +98,7 @@ The script accept the following arguments:
 ::
 
   usage: metadata_client.py [-h] -u URI -a
-                          {submit,retrieve,list,delete,email,kill_job}
+                          {submit,retrieve,list,delete,email}
                           [-i JOB_ID] [-v] [-o OUTPUT_FILE] [-f INPUT_FILE]
                           [-m METADATA_URI] [-d DATABASE_URI] [-s E_RELEASE]
                           [-r RELEASE_DATE] [-c CURRENT_RELEASE]
@@ -110,7 +110,7 @@ The script accept the following arguments:
   optional arguments:
   -h, --help            show this help message and exit
   -u URI, --uri URI     Metadata database REST service URI
-  -a {submit,retrieve,list,delete,email,kill_job}, --action {submit,retrieve,list,delete,email,kill_job}
+  -a {submit,retrieve,list,delete,email}, --action {submit,retrieve,list,delete,email}
                         Action to take
   -i JOB_ID, --job_id JOB_ID
                         Metadata job identifier to retrieve

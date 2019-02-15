@@ -74,7 +74,7 @@ The script accept the following arguments:
 ::
 
     usage: db_copy_client.py [-h] -u URI -a
-                             {submit,retrieve,list,delete,email,kill_job}
+                             {submit,retrieve,list,delete,email}
                              [-i JOB_ID] [-v] [-o OUTPUT_FILE] [-f INPUT_FILE]
                              [-s SOURCE_DB_URI] [-t TARGET_DB_URI]
                              [-y ONLY_TABLES] [-n SKIP_TABLES] [-p UPDATE]
@@ -85,7 +85,7 @@ The script accept the following arguments:
     arguments:
       -h, --help            show this help message and exit
       -u URI, --uri URI     REST service URI
-      -a {submit,retrieve,list,delete,email,kill_job}, --action {submit,retrieve,list,delete,email,kill_job}
+      -a {submit,retrieve,list,delete,email}, --action {submit,retrieve,list,delete,email}
                             Action to take
       -i JOB_ID, --job_id JOB_ID
                             HC job identifier to retrieve

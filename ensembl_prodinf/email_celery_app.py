@@ -2,15 +2,17 @@ import logging
 
 from celery import Celery
 
-app = Celery('ensembl_prodinf',
-             include=['ensembl_prodinf.email_tasks'])
+from .utils.app_logging import add_app_handler
+
+app = Celery('ensembl_prodinf', include=['ensembl_prodinf.email_tasks'])
 
 # Load the externalised config module from PYTHONPATH
 try:
     import email_celery_app_config
 
     app.config_from_object('email_celery_app_config')
-except:
+    add_app_handler(app.log, __name__)
+except StandardError:
     logging.warning('Celery email requires email_celery_app_config module')
 
 if __name__ == '__main__':
