@@ -3,7 +3,7 @@ import argparse
 import logging
 
 from rest_client import RestClient
-from ensembl_prodinf import assert_mysql_db_uri
+from ensembl_prodinf.utils import assert_mysql_db_uri
 
 
 class MetadataClient(RestClient):

@@ -3,7 +3,7 @@
 import logging
 import unittest
 
-from ensembl_prodinf import dict_to_perl_string
+from ensembl_prodinf.utils import dict_to_perl_string
 from ensembl_prodinf.utils import perl_string_to_python
 
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ensembl_prodinf import HiveInstance
+from ensembl_prodinf.models import HiveInstance
 
 from shutil import copy2
 import unittest

@@ -1,4 +1,4 @@
-from ensembl_prodinf import HiveInstance
+from ensembl_prodinf.models import HiveInstance
 import time
 import logging
 import argparse
